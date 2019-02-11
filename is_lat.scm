@@ -1,5 +1,5 @@
 #lang scheme
-;check if argument 'l' is list of atoms
+;check if 'l' is list of atoms
 (define lat?
   (lambda(l)
     (cond
