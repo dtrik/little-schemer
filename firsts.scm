@@ -1,5 +1,5 @@
 #lang scheme
-
+;returns first S-expressions from 'l'
 (define firsts
   (lambda (l)
     (cond

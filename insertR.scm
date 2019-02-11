@@ -1,5 +1,5 @@
 #lang scheme
-
+;insert atom 'new' to the right of atom 'old' in list of atoms 'lat'
 (define insertR
   (lambda (new old lat)
     (cond

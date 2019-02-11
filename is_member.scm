@@ -1,5 +1,5 @@
 #lang scheme
-
+;check if 'a' is a member of list of atoms 'lat'
 (define member?
   (lambda(a lat)
     (cond

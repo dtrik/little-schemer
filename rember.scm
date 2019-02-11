@@ -1,5 +1,5 @@
 #lang scheme
-
+;remove atom 'a' from list of atoms 'lat'
 (define rember
   (lambda (a lat)
     (cond
