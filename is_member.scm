@@ -1,5 +1,5 @@
 #lang scheme
-;check if argument 'a' is a member of atomic list 'lat'
+;check if 'a' is a member of atomic list 'lat'
 (define member?
   (lambda(a lat)
     (cond
