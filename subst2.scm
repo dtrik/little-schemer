@@ -1,5 +1,5 @@
 #lang scheme
-;substitute first instance of atom argument 'o1' or atom argument 'o2' with atom 'new' in list of atoms 'lat'
+;substitute first instance of atom 'o1' or atom 'o2' with atom 'new' in list of atoms 'lat'
 (define subst2
   (lambda (new o1 o2 lat)
     (cond
