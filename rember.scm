@@ -1,5 +1,5 @@
 #lang scheme
-
+;remove argument 'a' from argument 'lat'
 (define rember
   (lambda (a lat)
     (cond
