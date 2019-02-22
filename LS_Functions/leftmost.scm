@@ -6,9 +6,6 @@
 (define leftmost
   (lambda (l)
     (cond
-      ((null? l) '())
-      (else
-       (cond
-         ((atom? (car l)) (car l))
-         (else (leftmost (car l))))))))
+      ((atom? (car l)) (car l))
+      (else (leftmost (car l))))))
        
