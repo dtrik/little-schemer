@@ -4,6 +4,7 @@
 ;recursively call addtup till tup is null
 ;use o+ to add first element of tup to 
 ;addtup of rest of tup
+;eg: (addtup '(5 6 7 8 9)) = 35
 
 (define addtup
   (lambda (tup)
