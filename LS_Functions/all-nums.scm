@@ -3,6 +3,7 @@
 ;recursively call all-nums till lat is null
 ;check first element of lat, if number, cons it to 
 ;all-nums of rest of lat, else all-nums of rest of lat
+;eg: (all-nums '(5 a 6 b 7)) = '(5 6 7)
 
 (define all-nums
   (lambda (lat)
