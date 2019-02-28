@@ -3,6 +3,7 @@
 ;using add1 and sub1
 ;recursive call on o+ till m is zero
 ;at each call (m times) add1 to n
+;eg (o+ 5 6) = 11
 
 (define o+
   (lambda (m n)
