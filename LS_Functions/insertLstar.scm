@@ -3,7 +3,8 @@
 ;using atom?
 ;recursive call on insertL* till l is null
 ;if l not null, check if first of l is atom
-;if atom, then cons new to cons of old to insertL* on rest of l
+;if atom, then check if first of l is old
+;then cons new to cons of old to insertL* on rest of l
 ;else, cons first of l to insertL* on rest of l
 ;if not atom, then cons insertL* on first of l and 
 ;insertL* on rest of l
