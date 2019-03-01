@@ -1,5 +1,8 @@
 #lang scheme
-;check if 'a' is a member of list of atoms 'lat'
+;function to check if atom a is a member of list of atoms lat
+;recursion on member? till lat is null
+;if not null, check if a is equal to first of lat or member? of rest of lat
+
 (define member?
   (lambda(a lat)
     (cond
