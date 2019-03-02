@@ -1,5 +1,10 @@
 #lang scheme
-;;insert atom 'new' after every atom 'old' in list of atoms 'lat'
+;function to insert new to right of all old in lat
+;recursion on multinsertR till lat is null
+;if not null, check if first of lat is old
+;then cons old to cons of new to multiinsertR of rest of lat
+;else, cons first of lat to multiinsertR of rest of lat
+
 (define multiinsertR
   (lambda (new old lat)
     (cond
