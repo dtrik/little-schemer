@@ -4,6 +4,12 @@
 ;recursion on x till m is zero
 ;add n to itself m times
 
+(define x
+  (lambda (n m)
+    (cond
+      ((zero? m) 0)
+      (else (o+ n (x n (sub1 m)))))))
+
 (define o+
   (lambda (m n)
     (cond
@@ -13,9 +19,3 @@
 (define sub1
   (lambda (n)
     (- n 1)))
-
-(define x
-  (lambda (n m)
-    (cond
-      ((zero? m) 0)
-      (else (o+ n (x n (sub1 m)))))))
