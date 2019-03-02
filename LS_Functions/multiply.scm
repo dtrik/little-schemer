@@ -1,4 +1,9 @@
 #lang scheme
+;function to multiply m and n
+;using o+
+;recursion on x till m is zero
+;add n to itself m times
+
 (define o+
   (lambda (m n)
     (cond
