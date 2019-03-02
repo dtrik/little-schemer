@@ -1,5 +1,5 @@
 #lang scheme
-;function to insert atom new to left of atom old in lat l
+;function to insert atom new to left of atom old in l
 ;using atom?
 ;recursive call on insertL* till l is null
 ;if l not null, check if first of l is atom
