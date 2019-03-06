@@ -1,4 +1,10 @@
 #lang scheme
+;function to check if two atoms a1 and a2 are equal
+;using equan?
+;if both are numbers, equal? on a1 and a2
+;if either is number, false
+;else eq? on a1 and a2
+
 (define sub1
   (lambda (n)
     (- n 1)))
