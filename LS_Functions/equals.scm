@@ -1,4 +1,9 @@
 #lang scheme
+;function to check if two s-expressions s1 and s2 are equal
+;using eqlist? and equan?
+;if s1 and s2 are atoms, then equan? s1 and s2
+;if s1 or s2 are atoms, then false
+;else eqlist? s1 and s2
 
 (define atom?
     (lambda (x)
