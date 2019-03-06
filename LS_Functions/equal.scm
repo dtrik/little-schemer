@@ -1,7 +1,16 @@
 #lang scheme
-(define sub1
-  (lambda (n)
-    (- n 1)))
+;function to check if two numbers m and n are equal
+;using greater? and lesser?
+;if m is greater than n, then false
+;if m is lesser than n, then false
+;else true
+
+(define equal?
+  (lambda (m n)
+    (cond
+      ((greater? m n) #f)
+      ((lesser? m n) #f)
+      (else #t))))
 
 (define greater?
   (lambda (m n)
@@ -17,9 +26,6 @@
       ((zero? m) #t)
       (else (lesser? (sub1 m) (sub1 n))))))
 
-(define equal?
-  (lambda (m n)
-    (cond
-      ((greater? m n) #f)
-      ((lesser? m n) #f)
-      (else #t))))
+(define sub1
+  (lambda (n)
+    (- n 1)))
