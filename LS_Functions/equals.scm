@@ -4,35 +4,17 @@
 ;if s1 and s2 are atoms, then equan? s1 and s2
 ;if s1 or s2 are atoms, then false
 ;else eqlist? s1 and s2
-
-(define atom?
-    (lambda (x)
-      (and (not (pair? x)) (not (null? x)))))
-
-(define sub1
-  (lambda (n)
-    (- n 1)))
-
-(define greater?
-  (lambda (m n)
-    (cond
-      ((zero? m) #f)
-      ((zero? n) #t)
-      (else (greater? (sub1 m) (sub1 n))))))
-
-(define lesser?
-  (lambda (m n)
-    (cond
-      ((zero? n) #f)
-      ((zero? m) #t)
-      (else (lesser? (sub1 m) (sub1 n))))))
-
 (define equal?
-  (lambda (m n)
+  (lambda (s1 s2)
     (cond
-      ((greater? m n) #f)
-      ((lesser? m n) #f)
-      (else #t))))
+      ((and (atom? s1)
+            (atom? s2))
+       (equan? s1 s2))
+      ((or (atom? s1)
+           (atom? s2))
+       #f)
+      (else (eqlist? s1
+                     s2)))))
 
 (define equan?
   (lambda (a1 a2)
@@ -66,13 +48,30 @@
                      (cdr l2)))))))
 
 (define equal?
-  (lambda (s1 s2)
+  (lambda (m n)
     (cond
-      ((and (atom? s1)
-            (atom? s2))
-       (equan? s1 s2))
-      ((or (atom? s1)
-           (atom? s2))
-       #f)
-      (else (eqlist? s1
-                     s2)))))
+      ((greater? m n) #f)
+      ((lesser? m n) #f)
+      (else #t))))
+
+(define greater?
+  (lambda (m n)
+    (cond
+      ((zero? m) #f)
+      ((zero? n) #t)
+      (else (greater? (sub1 m) (sub1 n))))))
+
+(define lesser?
+  (lambda (m n)
+    (cond
+      ((zero? n) #f)
+      ((zero? m) #t)
+      (else (lesser? (sub1 m) (sub1 n))))))
+
+(define atom?
+    (lambda (x)
+      (and (not (pair? x)) (not (null? x)))))
+
+(define sub1
+  (lambda (n)
+    (- n 1)))
