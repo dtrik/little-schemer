@@ -5,6 +5,9 @@
 ;if m becomes zero first then false
 ;if n becomes zero first then true
 ;if both zero (equal), first cond is zero? m so false
+;eg: (greater 5 6) = #f
+;    (greater 6 5) = #t
+;    (greater 5 5) = #f
 
 (define greater?
   (lambda (m n)
