@@ -3,6 +3,8 @@
 ;recursive call till lat is null
 ;if not null, check if first of lat is old, then cons new with lat
 ;else cons first of lat with recursion on rest of lat
+;eg: (insertL 'king 'kenny '(kenny was a liverpool manager)) = 
+;   '(king kenny was a liverpool manager)
 
 (define insertL
   (lambda (new old lat)
