@@ -3,6 +3,7 @@
 ;using add1
 ;recursion on length till lat is null
 ;if not null, add1 to length of rest of lat
+;eg:  (length '(a b c)) = 3
 
 (define length
   (lambda (lat)
